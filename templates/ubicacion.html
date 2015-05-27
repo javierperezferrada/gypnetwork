@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Developed By M Abdur Rokib Promy">
+    <meta name="author" content="cosmic">
+    <meta name="keywords" content="Bootstrap 3, Template, Theme, Responsive, Corporate, Business">
+
+    <link href="{{ url_for('static', filename='img/favicon.png') }}" rel="sshortcut icon">
+
+    <title>
+      GYPnetwork | Ubicacion
+    </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet"> 
+    <link href="{{ url_for('static', filename='css/theme.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap-reset.css') }}" rel="stylesheet">
+
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet">-->
+
+    <!--external css-->
+    <link href="{{ url_for('static', filename='assets/font-awesome/css/font-awesome.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/flexslider.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='assets/bxslider/jquery.bxslider.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/animate.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='assets/owlcarousel/owl.carousel.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='assets/owlcarousel/owl.theme.css') }}" rel="stylesheet">
+
+    <link href="{{ url_for('static', filename='css/superfish.css') }}" rel="stylesheet" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'> -->
+
+
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static', filename='css/component.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" >
+    <link href="{{ url_for('static', filename='css/style-responsive.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/parallax-slider/parallax-slider.css') }}" rel="stylesheet">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/parallax-slider/modernizr.custom.28468.js') }}"></script>
+
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-1.11.1.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.gomap-1.3.2.min.js') }}"></script>
+
+    <script type="text/javascript">
+	$(document).ready(function(){
+
+    $("#map").goMap({ 
+      zoom: 18,
+      markers: [{  
+        latitude: -39.85027, 
+        longitude:  -73.22247, 
+        html: { 
+                content: 'GyPNetwork Ltda.', 
+                popup: true 
+            } ,
+ 
+        title: 'GyPNetwork Ltda.' 
+      }] 
+    }); 
+ 
+    $.goMap.createMarker({  
+      address: 'Vilnius, Lithuania' ,
+      zoom:18
+    });  
+	});
+	</script>
+	<style type="text/css">
+	*{}
+	#map{
+		width:600px;
+		height:400px;
+	}
+	</style>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js">
+    </script>
+    <script src="js/respond.min.js">
+    </script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!--header start-->
+    <header class="head-section">
+      <div class="navbar navbar-default navbar-static-top container">
+          <div class="navbar-header">
+              <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="inicio">GyP<span>Network</span></a>
+          </div>
+          <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                  <li class="dropdown">
+                      <a href="inicio">Inicio
+                      </a>
+                  </li>
+                  <li class="dropdown">
+                      <a href="sobre">Quienes somos
+                      </a>
+                  </li>
+                  <li class="dropdown">
+                      <a href="ubicacion">Ubicacion
+                      </a>
+                  </li>
+                  <li class="dropdown">
+                      <a href="galeria">Galeria
+                      </a>   
+                  <li>
+                      <a href="contacto">Contacto</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+    </header>
+    <!--header end-->
+    <body>
+    <!--breadcrumbs start-->
+    <div class="breadcrumbs">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-4">
+                    <h1>Ubicacion</h1>
+                </div>
+                <div class="col-lg-8 col-sm-8">
+                    <ol class="breadcrumb pull-right">
+                        <li><a href="#">Inicio</a></li>
+                        <li class="active">Ubicacion</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--breadcrumbs end-->
+
+    <div class="container">
+
+
+      <div class="row">
+        <div class="col-lg-5 col-sm-5 address">
+          <section class="contact-infos">
+            <h4 class="title custom-font text-black">
+              Direccion
+            </h4>
+            <address>
+              Villa San Pedro, pasaje 5 #712,
+              <br>
+              Valdivia, Chile
+            </address>
+          </section>
+          <section class="contact-infos">
+            <h4>
+              Telefonos
+            </h4>
+            <p>
+              <i class="icon-phone">
+              </i>
+              +56 9 99883623  Javier Pérez Ferrada
+            </p>
+
+            <p>
+              <i class="icon-phone">
+              </i>
+              +56 9 92653875  Francisco Gonzalez Ojeda
+            </p>
+
+          </section>
+        </div>
+    		<div id="map">
+    		
+    		</div>
+      </div>
+    </div>
+
+    
+    </body>
+
+
+    <footer class="footer-small">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-sm-6 pull-right">
+                    <ul class="social-link-footer list-unstyled">
+                        <li class="wow flipInX" data-wow-duration="2s" data-wow-delay=".1s"><a href="https://www.facebook.com/gypnetwork.info?fref=ts"><i class="fa fa-facebook"></i></a></li>
+                        
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                  <div class="copyright">
+                    <p>&copy;  Powered by PenguinSoft</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
