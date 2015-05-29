@@ -52,13 +52,17 @@
             <p>
               <i class="icon-phone">
               </i>
-              +56 9 99883623  Javier Pérez Ferrada
+              Javier Pérez Ferrada
+              <br>
+              +56 9 99883623  
             </p>
 
             <p>
               <i class="icon-phone">
               </i>
-              +56 9 92653875  Francisco Gonzalez Ojeda
+              Francisco Gonzalez Ojeda
+              <br>
+              +56 9 92653875  
             </p>
 
           </section>
@@ -67,39 +71,30 @@
           <h4>
             Formulario de contacto
           </h4>
-          <div class="contact-form">
-            <form role="form" action="MAILTO:gypnetwork.info@gmail.com" method="post" enctype="text/plain">
-              <div class="form-group">
-                <label for="name">
-                  Nombre o Empresa
-                </label>
-                <input type="text" placeholder="Nombre o Empresa" id="name" class="form-control" name="name" >
-              </div>
-              <div class="form-group">
-                <label for="email">
-                  Email
-                </label>
-                <input type="text" placeholder="Email" id="email" class="form-control" name="mail" >
-              </div>
-              <div class="form-group">
-                <label for="phone">
-                  Telefono
-                </label>
-                <input type="text" id="phone" placeholder="Telefono" class="form-control">
-              </div>
-              <div class="form-group">
-                <label for="phone">
-                  Mensaje
-                </label>
-                <input type="text" name="comment" rows="5" placeholder="Mensaje" class="form-control">
-              </div>
-              <button class="btn btn-info" type="submit">
-                Enviar
-              </button>
-              <button class="btn btn-info" type="reset">
-                Reset
-              </button>
+
+          {% if success %}
+            <p>Gracias por su mensaje. Nos contactaremos con usted a la brevedad.</p>
+ 
+          {% else %}
+
+            <form action="{{ url_for('contacto') }}" method=post>
+
+              {{ form.nombre.label }}
+              {{ form.nombre }}
+         
+              {{ form.email.label }}
+              {{ form.email }}
+
+              {{ form.telefono.label }}
+              {{ form.telefono }}
+         
+              {{ form.message.label }}
+              {{ form.message }}
+         
+              {{ form.submit }}
             </form>
+
+          {% endif %}
 
           </div>
         </div>
@@ -140,7 +135,7 @@
                 <blockquote>
                   <div class="row">
                     <div class="col-sm-3 text-center">
-                      <img class="img-circle" src="img/person_1.png" style="width: 100px;height:100px;" alt="">
+                      <img class="img-circle" src="{{ url_for('static', filename='img/llamada.jpg') }}" style="width: 100px;height:100px;" alt="">
                     </div>
                     <div class="col-sm-9">
                       <p>
@@ -158,7 +153,7 @@
                 <blockquote>
                   <div class="row">
                     <div class="col-sm-3 text-center">
-                      <img class="img-circle" src="img/person_2.png" style="width: 100px;height:100px;" alt="">
+                      <img class="img-circle" src="{{ url_for('static', filename='img/somos.jpg') }}" style="width: 100px;height:100px;" alt="">
                     </div>
                     <div class="col-sm-9">
                       <p>
@@ -176,7 +171,7 @@
                 <blockquote>
                   <div class="row">
                     <div class="col-sm-3 text-center">
-                      <img class="img-circle" src="img/person_3.png" style="width: 100px;height:100px;" alt="">
+                      <img class="img-circle" src="{{ url_for('static', filename='img/hogar.jpg') }}" style="width: 100px;height:100px;" alt="">
                     </div>
                     <div class="col-sm-9">
                       <p>
@@ -197,5 +192,6 @@
         </div>
       </div>
     </div>
+
 
 {% endblock %}
